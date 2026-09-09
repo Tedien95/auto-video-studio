@@ -1,0 +1,30 @@
+# Môi trường ảo Python (rất nặng, không cần đẩy lên)
+voice_clone_env/
+venv/
+env/
+.venv/
+
+# Dữ liệu người dùng tạo ra khi chạy app (không nên public)
+downloads/
+outputs/
+temp_audio/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# File cấu hình cá nhân / môi trường
+.env
+.streamlit/secrets.toml
+
+# File hệ điều hành / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
+
+# Model cache (nếu vô tình bị tải vào thư mục project)
+*.pth
+*.ckpt
+*.safetensors
