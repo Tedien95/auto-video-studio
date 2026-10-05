@@ -1,0 +1,9 @@
+streamlit==1.65.0
+streamlit-option-menu==0.4.0
+pysrt==1.1.2
+pydub==0.25.1
+edge-tts==7.2.8
+yt-dlp==2026.8.19
+deep-translator==1.11.4
+faster-whisper==1.2.1
+filelock==3.32.7

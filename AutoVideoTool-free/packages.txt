@@ -1,0 +1,3 @@
+ffmpeg
+libgomp1
+fonts-dejavu-core
