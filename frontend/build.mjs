@@ -1,0 +1,13 @@
+import {readFile, writeFile, mkdir} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+process.chdir(fileURLToPath(new URL('.', import.meta.url)));
+const value = process.env.STUDIO_BACKEND_URL?.trim();
+if (!value) throw new Error('Set STUDIO_BACKEND_URL to your deployed Streamlit HTTPS URL.');
+const url = new URL(value);
+if (url.protocol !== 'https:' || url.username || url.password) throw new Error('STUDIO_BACKEND_URL must be HTTPS without embedded credentials.');
+url.searchParams.set('embed', 'true');
+const serialized = JSON.stringify(url.href).replaceAll('<', '\\u003c');
+const source = await readFile('index.html', 'utf8');
+await mkdir('dist', {recursive: true});
+await writeFile('dist/index.html', source.replace('__BACKEND_URL_JSON__', serialized));
+console.log('Built Auto Video Studio gateway.');

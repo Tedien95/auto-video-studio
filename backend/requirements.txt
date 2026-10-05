@@ -1,0 +1,11 @@
+streamlit<2
+streamlit-option-menu>=0.4,<1
+pysrt==1.1.2
+pydub==0.25.1
+edge-tts>=7,<8
+yt-dlp
+deep-translator>=1.11,<2
+faster-whisper>=1.1,<2
+coqui-tts>=0.27,<0.28
+transformers>=4.57,<5
+numpy>=1.26,<3

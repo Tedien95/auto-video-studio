@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#131126">
+  <meta name="description" content="Auto Video Studio — video, phụ đề và giọng nói AI.">
+  <title>Auto Video Studio</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#100d21;color:#f3f1ff;font:14px system-ui,sans-serif}header{height:64px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff18;background:linear-gradient(110deg,#17122d,#252047)}.brand{display:flex;gap:12px;align-items:center}.mark{background:#8a7fff;color:#100d21;border-radius:10px;padding:9px;font-size:18px}.brand strong{display:block;font-size:16px}.brand small{color:#c4bdd9}a{color:#e3dfff;text-decoration:none;border:1px solid #ffffff30;border-radius:8px;padding:8px 12px}a:hover{background:#ffffff12}iframe{display:block;border:0;width:100%;height:calc(100dvh - 64px);background:#100d21}#fallback{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);padding:12px 16px;background:#262038;border:1px solid #514364;border-radius:12px;max-width:600px;width:calc(100% - 32px);box-shadow:0 8px 32px #0005}#fallback button{float:right;color:white;background:transparent;border:0;font-size:20px;cursor:pointer}#fallback p{margin:0 28px 0 0;line-height:1.5}[hidden]{display:none!important}@media(max-width:600px){header{padding:0 12px}.brand small{display:none}a{font-size:12px}}
+  </style>
+</head>
+<body>
+  <header><div class="brand"><span class="mark" aria-hidden="true">▶</span><div><strong>Auto Video Studio</strong><small>Video · Phụ đề · Giọng nói AI</small></div></div><a id="direct" target="_blank" rel="noopener">Mở toàn màn hình ↗</a></header>
+  <iframe id="studio" title="Ứng dụng Auto Video Studio" allow="clipboard-write; fullscreen"></iframe>
+  <div id="fallback" hidden><button id="dismiss" aria-label="Đóng thông báo">×</button><p>Nếu ứng dụng chưa hiện hoặc không tải được file, hãy nhấn <strong>Mở toàn màn hình</strong>. Máy chủ có thể cần thêm thời gian khởi động.</p></div>
+  <script>
+    const backendUrl = __BACKEND_URL_JSON__;
+    document.getElementById('direct').href = backendUrl;
+    document.getElementById('studio').src = backendUrl;
+    setTimeout(() => { document.getElementById('fallback').hidden = false; }, 20000);
+    document.getElementById('dismiss').addEventListener('click', () => { document.getElementById('fallback').hidden = true; });
+  </script>
+</body>
+</html>
