@@ -1,6 +1,6 @@
 # AutoVideoTool cloud + Vercel
 
-Đây là bản triển khai từ dự án F:\vsc\AutoVideoTool. Trang Vercel nhúng ứng dụng Streamlit chạy trên máy chủ cloud. Máy cá nhân có thể tắt. Trang Vercel không thực hiện render hay chạy mô hình AI.
+Đây là bản triển khai từ dự án AutoVideoTool. Trang Vercel nhúng ứng dụng Streamlit chạy trên máy chủ cloud. Máy cá nhân có thể tắt. Trang Vercel không thực hiện render hay chạy mô hình AI.
 
 ## Máy chủ ứng dụng
 
