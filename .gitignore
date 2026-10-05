@@ -1,0 +1,6 @@
+.env
+.vercel/
+backend/data/
+__pycache__/
+*.pyc
+frontend/dist/
