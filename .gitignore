@@ -1,6 +1,10 @@
 .env
 .vercel/
+.venv/
 backend/data/
+runtime/
+tools/
 __pycache__/
 *.pyc
 frontend/dist/
+.streamlit/secrets.toml
